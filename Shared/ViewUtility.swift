@@ -47,3 +47,8 @@ struct MacOnlyDivider: ViewModifier {
     }
 }
 #endif
+extension View {
+    func toAny() -> some View {
+        return AnyView(self)
+    }
+}

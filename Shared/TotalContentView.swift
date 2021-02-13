@@ -14,9 +14,11 @@ struct TotalContentView: View {
     var body: some View {
         
         if todo.isEmpty {
-            AnyView(EmptyView())
+            EmptyView()
+                .toAny()
         } else {
-            AnyView(Text("Total"))
+            Text("Total")
+                .toAny()
                 .padding()
                 .navigationTitle("Total")
         }
